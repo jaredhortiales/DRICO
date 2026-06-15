@@ -1,0 +1,4 @@
+# Archivos del sistema que no deben subirse a GitHub
+Thumbs.db
+.DS_Store
+*.tmp

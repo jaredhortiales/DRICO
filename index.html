@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D' Rico Tapicería - Catálogo</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__content">
+      <div class="logo">
+        <!-- ============================================= -->
+        <!-- Logo de la empresa (assets/logo.png)          -->
+        <!-- Para cambiarlo, reemplaza ese archivo          -->
+        <!-- ============================================= -->
+        <img src="assets/logo.png" alt="D' Rico Tapicería" class="logo__imagen" />
+        <p class="logo__slogan">
+          Fabricación y tapizado de muebles &middot; Papel tapiz &middot; Decoración
+        </p>
+      </div>
+
+      <div class="buscador">
+        <input
+          type="text"
+          id="buscador"
+          placeholder="Buscar por nombre, color, estilo..."
+          aria-label="Buscar productos"
+        />
+      </div>
+    </div>
+
+    <nav class="categorias" id="categorias" aria-label="Filtrar por categoría">
+      <!-- Los botones de categoría se generan automáticamente desde productos.json -->
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero__contenido">
+      <h2>Renovamos y creamos muebles a tu medida</h2>
+      <p>
+        Explora nuestro catálogo de piezas disponibles. Si te gusta algún
+        diseño, escríbenos por WhatsApp para cotizar fabricación, tapizado
+        o un acabado personalizado con tu papel tapiz o tela favorita.
+      </p>
+    </div>
+  </section>
+
+  <main class="contenedor">
+    <p id="resultado-contador" class="contador"></p>
+
+    <div class="grid-productos" id="grid-productos">
+      <!-- Las tarjetas de producto se generan automáticamente -->
+    </div>
+
+    <p id="sin-resultados" class="sin-resultados" hidden>
+      No se encontraron productos que coincidan con tu búsqueda.
+    </p>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo.png" alt="D' Rico Tapicería" class="footer__logo" />
+    <p>&copy; <span id="anio"></span> D' Rico Tapicería — Catálogo generado automáticamente con IA.</p>
+  </footer>
+
+  <!-- ============================================= -->
+  <!-- Visor de imagen (lightbox): se abre al hacer  -->
+  <!-- clic en cualquier foto de producto y ajusta   -->
+  <!-- la imagen completa al tamaño de la pantalla.  -->
+  <!-- ============================================= -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__cerrar" id="lightbox-cerrar" aria-label="Cerrar">
+      &times;
+    </button>
+    <figure class="lightbox__figura">
+      <img class="lightbox__imagen" id="lightbox-imagen" src="" alt="" />
+      <figcaption class="lightbox__info">
+        <h3 id="lightbox-nombre"></h3>
+        <p id="lightbox-descripcion"></p>
+      </figcaption>
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

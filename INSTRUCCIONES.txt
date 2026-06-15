@@ -1,0 +1,65 @@
+# Catálogo Web D' Rico Tapicería — Paquete listo para GitHub
+
+Este paquete ya incluye:
+
+- `index.html`, `style.css`, `script.js` — sitio web con la marca D' Rico
+- `assets/logo.png` — tu logo
+- `productos.json` — los **86 productos ya analizados** por Gemini
+  (categorías, descripciones, colores, estilos, etc.)
+- `.gitignore`
+
+## ⚠️ Lo único que falta: tus 86 fotos
+
+Por tamaño, este paquete NO incluye las imágenes. Debes copiar tu carpeta
+`imagenes` (la que ya generó `analizar_gemini.py` dentro de
+`catalogo_web\imagenes`, con tus 86 archivos .jfif) dentro de esta misma
+carpeta, de modo que quede así:
+
+```
+catalogo_web/
+├── index.html
+├── style.css
+├── script.js
+├── productos.json
+├── .gitignore
+├── assets/
+│   └── logo.png
+└── imagenes/        <- AQUÍ van tus 86 fotos (001.jfif, 002.jfif, ...)
+    ├── 001.jfif
+    ├── 002.jfif
+    └── ...
+```
+
+## Probar localmente antes de subir
+
+Abre una terminal dentro de esta carpeta (`catalogo_web`) y ejecuta:
+
+```powershell
+python -m http.server 8000
+```
+
+Abre `http://localhost:8000` en tu navegador. Deberías ver las 86
+tarjetas de productos, con categorías como **Sala, Recámara, Sillas,
+Comedor, Decoración, Jardín, Almacenaje, Oficina, Otro**.
+
+## Subir a GitHub
+
+```powershell
+git init
+git add .
+git commit -m "Catálogo D' Rico Tapicería - 86 productos"
+git branch -M main
+git remote add origin https://github.com/TU-USUARIO/TU-REPO.git
+git push -u origin main
+```
+
+Luego activa GitHub Pages en Settings → Pages → Branch: `main`,
+carpeta `/ (root)`.
+
+## Antes de publicar, no olvides:
+
+- Cambiar el número de WhatsApp en `script.js` (`CONFIG.numeroWhatsApp`).
+- Revisar el texto de bienvenida en `index.html` (sección `<section class="hero">`).
+
+Para más detalle, consulta el `README.md` principal del proyecto Python
+(secciones 11, 12 y 13).
